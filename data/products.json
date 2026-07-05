@@ -1,16 +1,3 @@
 {
-  "products": [
-    {
-      "oldPrice": 6161615.99,
-      "bestseller": true,
-      "badge": "161616",
-      "brand": "161616161",
-      "price": 16160.9961,
-      "name": "616161614",
-      "reviews": 0,
-      "id": "4516156161",
-      "rating": 4.1,
-      "category": "hair-care"
-    }
-  ]
+  "products": []
 }
