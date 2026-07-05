@@ -36,6 +36,15 @@ yarn-error.log*
 # vercel
 .vercel
 
+# netlify
+.netlify
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local AI / editor configs
+.claude/
+.codex/
+.mcp.json
+.playwright-mcp/
