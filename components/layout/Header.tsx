@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
+import { Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -11,14 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { announcement, navLinks, site, utilityLinks } from "@/data/siteContent";
-import { categories } from "@/data/categories";
 
 function Logo() {
   return (
@@ -128,7 +121,9 @@ export function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="border-b border-border py-3 text-sm font-medium text-foreground transition-colors hover:text-pink"
+                    className={`border-b border-border py-3 text-sm font-medium transition-colors hover:text-pink ${
+                      link.highlight ? "text-pink" : "text-foreground"
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -160,46 +155,31 @@ export function Header() {
         </div>
       </div>
 
-      {/* Category nav */}
-      <nav className="hidden border-b border-border lg:block">
-        <ul className="container-px flex items-center gap-1 py-2">
-          <li>
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <button
-                    type="button"
-                    className="mr-3 flex cursor-pointer items-center gap-2 rounded-md bg-foreground px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-pink"
-                  />
-                }
-              >
-                <Menu className="h-4 w-4" />
-                Всички категории
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-64">
-                {categories.map((cat) => (
-                  <DropdownMenuItem
-                    key={cat.slug}
-                    render={<Link href={`/category/${cat.slug}`} />}
+      {/* Category nav — Notino style: тъмна лента със скрол */}
+      <nav className="hidden bg-charcoal text-primary-foreground lg:block">
+        <div className="container-px overflow-x-auto scrollbar-thin">
+          <ul className="flex items-center gap-1 py-2 whitespace-nowrap">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                {link.highlight ? (
+                  <Link
+                    href={link.href}
+                    className="inline-flex items-center rounded-full bg-pink px-3.5 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-pink/90"
                   >
-                    <span className="font-medium">{cat.name}</span>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </li>
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-pink"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="rounded-md px-3 py-1.5 text-sm font-medium text-primary-foreground/90 transition-colors hover:text-pink"
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
 
       {/* Search (mobile) */}

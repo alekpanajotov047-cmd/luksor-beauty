@@ -13,6 +13,12 @@ export type Category = {
 
 export const categories: Category[] = [
   {
+    slug: "offers",
+    name: "Промоции",
+    description: "Сезонни оферти и ограничени цени",
+    image: "/images/categories/offers.jpg",
+  },
+  {
     slug: "perfumes",
     name: "Парфюми",
     description: "Нишови и дизайнерски аромати",
@@ -25,27 +31,81 @@ export const categories: Category[] = [
     image: "/images/categories/makeup.jpg",
   },
   {
-    slug: "skincare",
-    name: "Грижа за кожата",
-    description: "Серуми, кремове, маски",
-    image: "/images/categories/skincare.jpg",
-  },
-  {
     slug: "hair-care",
     name: "Коса",
     description: "Грижа и стайлинг",
     image: "/images/categories/hair-care.jpg",
   },
   {
+    slug: "face",
+    name: "Лице",
+    description: "Серуми, кремове, маски",
+    image: "/images/categories/face.jpg",
+  },
+  {
+    slug: "body",
+    name: "Тяло",
+    description: "Душ, лосиони, скрабове",
+    image: "/images/categories/body.jpg",
+  },
+  {
+    slug: "teeth",
+    name: "Зъби",
+    description: "Паста, четки, избелване",
+    image: "/images/categories/teeth.jpg",
+  },
+  {
+    slug: "mother-baby",
+    name: "Майка и дете",
+    description: "Грижа за майка и бебе",
+    image: "/images/categories/mother-baby.jpg",
+  },
+  {
     slug: "men",
-    name: "За мъже",
-    description: "Парфюми и грижа",
+    name: "Мъже",
+    description: "Парфюми и грижа за мъже",
     image: "/images/categories/men.jpg",
   },
   {
-    slug: "gifts",
-    name: "Подаръци",
-    description: "Комплекти и ваучери",
-    image: "/images/categories/gifts.jpg",
+    slug: "pharmacy",
+    name: "Специална козметика",
+    description: "Дерматологична и лечебна",
+    image: "/images/categories/pharmacy.jpg",
+  },
+  {
+    slug: "sun",
+    name: "Слънце",
+    description: "Слънцезащита и афтърсън",
+    image: "/images/categories/sun.jpg",
+  },
+  {
+    slug: "electronics",
+    name: "Електро",
+    description: "Уреди за красота",
+    image: "/images/categories/electronics.jpg",
+  },
+  {
+    slug: "salon",
+    name: "Салони",
+    description: "Професионална козметика",
+    image: "/images/categories/salon.jpg",
+  },
+  {
+    slug: "luxury",
+    name: "Luxury",
+    description: "Луксозни марки и колекции",
+    image: "/images/categories/luxury.jpg",
+  },
+  {
+    slug: "brands",
+    name: "Марки",
+    description: "Разгледай по бранд",
+    image: "/images/categories/brands.jpg",
+  },
+  {
+    slug: "inspiration",
+    name: "Вдъхновение",
+    description: "Съвети и трендове",
+    image: "/images/categories/inspiration.jpg",
   },
 ];

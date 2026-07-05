@@ -22,14 +22,24 @@ export const utilityLinks: { label: string; href: string }[] = [
   { label: "BG", href: "#" },
 ];
 
-/** Главна навигация (категории) */
-export const navLinks: { label: string; href: string }[] = [
+/** Главна навигация (категории) — първият е с розов hightlight (Notino стил) */
+export const navLinks: { label: string; href: string; highlight?: boolean }[] = [
+  { label: "Промоции", href: "/category/offers", highlight: true },
   { label: "Парфюми", href: "/category/perfumes" },
   { label: "Грим", href: "/category/makeup" },
-  { label: "Грижа за кожата", href: "/category/skincare" },
   { label: "Коса", href: "/category/hair-care" },
-  { label: "За мъже", href: "/category/men" },
-  { label: "Подаръци", href: "/category/gifts" },
+  { label: "Лице", href: "/category/face" },
+  { label: "Тяло", href: "/category/body" },
+  { label: "Зъби", href: "/category/teeth" },
+  { label: "Майка и дете", href: "/category/mother-baby" },
+  { label: "Мъже", href: "/category/men" },
+  { label: "Специална козметика", href: "/category/pharmacy" },
+  { label: "Слънце", href: "/category/sun" },
+  { label: "Електро", href: "/category/electronics" },
+  { label: "Салони", href: "/category/salon" },
+  { label: "Luxury", href: "/category/luxury" },
+  { label: "Марки", href: "/category/brands" },
+  { label: "Вдъхновение", href: "/category/inspiration" },
 ];
 
 /** Hero банер */
