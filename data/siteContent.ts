@@ -160,5 +160,5 @@ export const footer = {
     { label: "Facebook", href: "#" },
     { label: "TikTok", href: "#" },
   ],
-  legal: "© 2026 Luksor Beauty. Всички права запазени. Това е демо проект.",
+  legal: "© 2026 Luksor Beauty. Всички права запазени.",
 };
