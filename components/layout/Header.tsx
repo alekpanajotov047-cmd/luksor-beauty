@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +13,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { announcement, navLinks, site, utilityLinks } from "@/data/siteContent";
+import { megaMenus } from "@/data/megaMenu";
+import { MegaMenu } from "@/components/layout/MegaMenu";
+
+function slugFromHref(href: string): string | null {
+  const m = href.match(/\/category\/([^/?#]+)/);
+  return m ? m[1] : null;
+}
 
 function Logo() {
   return (
@@ -83,6 +91,8 @@ function IconAction({
 }
 
 export function Header() {
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+
   return (
     <header className="sticky top-0 z-50 w-full bg-background">
       {/* Utility bar */}
@@ -156,31 +166,52 @@ export function Header() {
         </div>
       </div>
 
-      {/* Category nav — Notino style: тъмна лента със скрол */}
-      <nav className="hidden bg-charcoal text-primary-foreground lg:block">
+      {/* Category nav — Notino style: тъмна лента със скрол + мега меню на hover */}
+      <nav
+        className="relative hidden bg-charcoal text-primary-foreground lg:block"
+        onMouseLeave={() => setOpenMenu(null)}
+      >
         <div className="container-px overflow-x-auto">
           <ul className="flex items-center gap-1 py-2 whitespace-nowrap">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                {link.highlight ? (
-                  <Link
-                    href={link.href}
-                    className="inline-flex items-center rounded-full bg-pink px-3.5 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-pink/90"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <Link
-                    href={link.href}
-                    className="rounded-md px-3 py-1.5 text-sm font-medium text-primary-foreground/90 transition-colors hover:text-pink"
-                  >
-                    {link.label}
-                  </Link>
-                )}
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const slug = slugFromHref(link.href);
+              const hasMenu = slug ? Boolean(megaMenus[slug]) : false;
+              return (
+                <li
+                  key={link.href}
+                  onMouseEnter={() => setOpenMenu(hasMenu ? slug : null)}
+                >
+                  {link.highlight ? (
+                    <Link
+                      href={link.href}
+                      className="inline-flex items-center rounded-full bg-pink px-3.5 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-pink/90"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors hover:text-pink ${
+                        openMenu && slug === openMenu
+                          ? "text-pink"
+                          : "text-primary-foreground/90"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
+
+        {/* Мега меню (излиза под лентата) */}
+        {openMenu && megaMenus[openMenu] && (
+          <div className="absolute inset-x-0 top-full z-40 border-t border-border bg-background text-foreground shadow-xl">
+            <MegaMenu columns={megaMenus[openMenu]} />
+          </div>
+        )}
       </nav>
 
       {/* Search (mobile) */}
