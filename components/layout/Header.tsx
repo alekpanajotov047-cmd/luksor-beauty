@@ -28,12 +28,13 @@ function Logo() {
 
 function SearchBar({ id = "search" }: { id?: string }) {
   return (
-    <div className="relative w-full">
+    <form action="/search" method="get" role="search" className="relative w-full">
       <label htmlFor={id} className="sr-only">
         Търсене
       </label>
       <Input
         id={id}
+        name="q"
         type="search"
         placeholder="Търсете продукт, марка или категория…"
         className="h-11 rounded-full border-border bg-secondary pr-12 pl-4"
@@ -45,7 +46,7 @@ function SearchBar({ id = "search" }: { id?: string }) {
       >
         <Search className="h-4 w-4" />
       </button>
-    </div>
+    </form>
   );
 }
 
@@ -157,7 +158,7 @@ export function Header() {
 
       {/* Category nav — Notino style: тъмна лента със скрол */}
       <nav className="hidden bg-charcoal text-primary-foreground lg:block">
-        <div className="container-px overflow-x-auto scrollbar-thin">
+        <div className="container-px overflow-x-auto">
           <ul className="flex items-center gap-1 py-2 whitespace-nowrap">
             {navLinks.map((link) => (
               <li key={link.href}>
