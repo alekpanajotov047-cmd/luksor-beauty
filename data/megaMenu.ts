@@ -558,6 +558,374 @@ export const megaMenus: Record<string, MegaMenuColumn[]> = {
     ],
   ],
 
+  // ─── МЪЖЕ ───────────────────────────────────────────────────
+  men: [
+    promoColumn,
+    [
+      {
+        title: "Мъжки парфюми",
+        links: [
+          { label: "Парфюмни води", href: "/category/men" },
+          { label: "Тоалетни води", href: "/category/men" },
+          { label: "Одеколони", href: "/category/men" },
+        ],
+      },
+      {
+        title: "Коса",
+        links: [
+          { label: "Шампоани", href: "/category/hair-care" },
+          { label: "Стилизиране", href: "/category/hair-care" },
+          { label: "Косопад при мъжете", href: "/category/hair-care" },
+        ],
+      },
+      {
+        title: "Тяло",
+        links: [
+          { label: "Дезодоранти", href: "/category/body" },
+          { label: "Продукти за баня", href: "/category/body" },
+        ],
+      },
+      {
+        title: "Лице",
+        links: [
+          { label: "Дневна и нощна грижа", href: "/category/face" },
+          { label: "Кремове за очи", href: "/category/face" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Бръснене",
+        links: [
+          { label: "Класическо бръснене", href: "/category/men" },
+          { label: "Резервни ножчета", href: "/category/men" },
+          { label: "Продукти за бръснене", href: "/category/men" },
+          { label: "След бръснене", href: "/category/men" },
+          { label: "Самобръсначки", href: "/category/men" },
+          { label: "Електрически самобръсначки", href: "/category/electronics" },
+          { label: "Тримери за брада", href: "/category/electronics" },
+        ],
+      },
+      {
+        title: "Грижа за брадата",
+        links: [
+          { label: "Масла", href: "/category/men" },
+          { label: "Балсами и восъци", href: "/category/men" },
+          { label: "Сапуни и шампоани", href: "/category/men" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Специална козметика",
+        links: [
+          { label: "Дермокозметика", href: "/category/pharmacy" },
+          { label: "Луксозна козметика", href: "/category/luxury" },
+          { label: "Козметика за пътуване", href: "/category/men" },
+        ],
+      },
+      {
+        title: "Комплекти",
+        links: [{ label: "Козметични комплекти", href: "/category/men" }],
+      },
+    ],
+    [
+      {
+        title: "Любими марки",
+        links: [
+          { label: "Gillette", href: "#" },
+          { label: "Biotherm", href: "#" },
+          { label: "Kérastase", href: "#" },
+          { label: "Proraso", href: "#" },
+          { label: "Braun", href: "#" },
+        ],
+      },
+    ],
+  ],
+
+  // ─── СПЕЦИАЛНА КОЗМЕТИКА (ДЕРМО) ────────────────────────────
+  pharmacy: [
+    promoColumn,
+    [
+      {
+        title: "Почистване на лицето",
+        links: [
+          { label: "Премахване на грим от очите", href: "/category/pharmacy" },
+          { label: "Почистване на кожата", href: "/category/pharmacy" },
+          { label: "Тоници за лице", href: "/category/pharmacy" },
+          { label: "Термални води", href: "/category/pharmacy" },
+        ],
+      },
+      {
+        title: "Грижа за лицето",
+        links: [
+          { label: "Грижа за околоочна зона", href: "/category/pharmacy" },
+          { label: "Серуми за лице", href: "/category/pharmacy" },
+          { label: "Кремове за лице", href: "/category/pharmacy" },
+          { label: "Маски за лице", href: "/category/pharmacy" },
+        ],
+      },
+      {
+        title: "Грижа за тялото",
+        links: [
+          { label: "Дезодоранти", href: "/category/pharmacy" },
+          { label: "Душ гелове и масла", href: "/category/pharmacy" },
+          { label: "Млека и кремове", href: "/category/pharmacy" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Грижа за косата",
+        links: [
+          { label: "Пърхот", href: "/category/pharmacy" },
+          { label: "Косопад", href: "/category/pharmacy" },
+          { label: "Чувствителен скалп", href: "/category/pharmacy" },
+          { label: "Сух скалп", href: "/category/pharmacy" },
+        ],
+      },
+      {
+        title: "SPF защита",
+        links: [
+          { label: "Кожа на лицето", href: "/category/pharmacy" },
+          { label: "Тяло", href: "/category/pharmacy" },
+          { label: "Деца", href: "/category/pharmacy" },
+        ],
+      },
+      {
+        title: "За деца",
+        links: [
+          { label: "За баня", href: "/category/pharmacy" },
+          { label: "Грижа за кожата", href: "/category/pharmacy" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Целенасочена грижа",
+        links: [
+          { label: "Акне", href: "/category/pharmacy" },
+          { label: "Атопичен дерматит", href: "/category/pharmacy" },
+          { label: "Розацея", href: "/category/pharmacy" },
+          { label: "Псориазис", href: "/category/pharmacy" },
+          { label: "Пигментни петна", href: "/category/pharmacy" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Комплекти",
+        links: [{ label: "Козметични комплекти", href: "/category/pharmacy" }],
+      },
+    ],
+    [
+      {
+        title: "Любими марки",
+        links: [
+          { label: "La Roche-Posay", href: "#" },
+          { label: "Uriage", href: "#" },
+          { label: "Vichy", href: "#" },
+          { label: "FILORGA", href: "#" },
+          { label: "Avène", href: "#" },
+        ],
+      },
+    ],
+  ],
+
+  // ─── СЛЪНЦЕ ─────────────────────────────────────────────────
+  sun: [
+    promoColumn,
+    [
+      {
+        title: "Слънцезащитни продукти",
+        links: [
+          { label: "Крем за лице", href: "/category/sun" },
+          { label: "Крем за тяло", href: "/category/sun" },
+          { label: "За бебета и деца", href: "/category/sun" },
+          { label: "С минерални филтри", href: "/category/sun" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Козметика преди и след слънце",
+        links: [
+          { label: "Преди слънчеви бани", href: "/category/sun" },
+          { label: "След слънчеви бани", href: "/category/sun" },
+        ],
+      },
+      {
+        title: "Козметика за солариум",
+        links: [{ label: "Виж всички", href: "/category/sun" }],
+      },
+      {
+        title: "Автобронзанти",
+        links: [{ label: "Автобронзанти и бронзанти", href: "/category/sun" }],
+      },
+    ],
+    [
+      {
+        title: "Слънце и коса",
+        links: [{ label: "Защита за коса", href: "/category/hair-care" }],
+      },
+      {
+        title: "Слънцезащитен фактор",
+        links: [
+          { label: "SPF 6–10", href: "/category/sun" },
+          { label: "SPF 15–25", href: "/category/sun" },
+          { label: "SPF 30–50+", href: "/category/sun" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Специална козметика",
+        links: [
+          { label: "Дермокозметика", href: "/category/pharmacy" },
+          { label: "Натурални крема", href: "/category/sun" },
+          { label: "Козметика за пътуване", href: "/category/sun" },
+          { label: "Корейски SPF", href: "/category/sun" },
+          { label: "Безопасен за корали", href: "/category/sun" },
+        ],
+      },
+    ],
+  ],
+
+  // ─── ЕЛЕКТРО ────────────────────────────────────────────────
+  electronics: [
+    promoColumn,
+    [
+      {
+        title: "Грижа за косата",
+        links: [
+          { label: "Сешоари", href: "/category/electronics" },
+          { label: "Маши", href: "/category/electronics" },
+          { label: "Преси за коса", href: "/category/electronics" },
+          { label: "Парни преси", href: "/category/electronics" },
+        ],
+      },
+      {
+        title: "Грижа за лицето",
+        links: [{ label: "Четки за почистване", href: "/category/electronics" }],
+      },
+      {
+        title: "Депилация и епилация",
+        links: [
+          { label: "Епилатори", href: "/category/electronics" },
+          { label: "IPL епилатори", href: "/category/electronics" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Грижа за зъбите",
+        links: [
+          { label: "Звукови четки", href: "/category/teeth" },
+          { label: "Магнитни четки", href: "/category/teeth" },
+          { label: "Осцилиращи четки", href: "/category/teeth" },
+          { label: "Зъбни душове", href: "/category/teeth" },
+          { label: "Детски ел. четки", href: "/category/teeth" },
+        ],
+      },
+      {
+        title: "Електроуреди за мъже",
+        links: [
+          { label: "Ел. самобръсначки", href: "/category/men" },
+          { label: "Тримери за брада", href: "/category/men" },
+          { label: "Машинки за коса", href: "/category/men" },
+          { label: "Тримери за косъмчета", href: "/category/men" },
+        ],
+      },
+      { title: "Фитнес уреди", links: [{ label: "Виж всички", href: "/category/electronics" }] },
+    ],
+    [
+      {
+        title: "Стоки за бебета",
+        links: [
+          { label: "Бебефони", href: "/category/mother-baby" },
+          { label: "Монитори за дишане", href: "/category/mother-baby" },
+          { label: "Термометри", href: "/category/mother-baby" },
+        ],
+      },
+      {
+        title: "Ароматизатори за дома",
+        links: [
+          { label: "Електрически дифузери", href: "/category/electronics" },
+          { label: "Овлажнители за въздух", href: "/category/electronics" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Любими марки",
+        links: [
+          { label: "Oral-B", href: "#" },
+          { label: "Braun", href: "#" },
+          { label: "Dyson", href: "#" },
+          { label: "FOREO", href: "#" },
+          { label: "Philips", href: "#" },
+        ],
+      },
+    ],
+  ],
+
+  // ─── LUXURY ─────────────────────────────────────────────────
+  luxury: [
+    [
+      {
+        title: "Не пропускайте",
+        links: [
+          { label: "Нови продукти", href: "/category/luxury" },
+          { label: "Безплатна доставка", href: "/category/luxury" },
+          { label: "Подарък към покупката", href: "/category/luxury" },
+          { label: "Всичко от Luxury", href: "/category/luxury" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Луксозни парфюми",
+        links: [{ label: "Виж всички", href: "/category/luxury" }],
+      },
+      {
+        title: "Нишови парфюми",
+        links: [{ label: "Виж всички", href: "/category/luxury" }],
+      },
+      {
+        title: "Луксозна грижа за кожата",
+        links: [{ label: "Виж всички", href: "/category/luxury" }],
+      },
+      { title: "Луксозен грим", links: [{ label: "Виж всички", href: "/category/luxury" }] },
+    ],
+    [
+      {
+        title: "Помощ при избора",
+        links: [{ label: "Discovery комплекти", href: "/category/luxury" }],
+      },
+    ],
+    [
+      {
+        title: "Вдъхновение",
+        links: [
+          { label: "Разкази за марки", href: "#" },
+          { label: "Ателие истории", href: "#" },
+        ],
+      },
+    ],
+    [
+      {
+        title: "Любими марки",
+        links: [
+          { label: "Creed", href: "#" },
+          { label: "HERMÈS", href: "#" },
+          { label: "DIOR", href: "#" },
+          { label: "TOM FORD", href: "#" },
+          { label: "Dolce & Gabbana", href: "#" },
+        ],
+      },
+    ],
+  ],
+
   // ─── МАЙКА И ДЕТЕ ───────────────────────────────────────────
   "mother-baby": [
     promoColumn,
