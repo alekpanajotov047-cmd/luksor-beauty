@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Локализация на UI
+locale: bg
+
+# Къде се качват снимките от админа
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Съобщения за commit-ите
+commit_messages:
+  create: 'CMS: добавен {{collection}} "{{slug}}"'
+  update: 'CMS: обновен {{collection}} "{{slug}}"'
+  delete: 'CMS: изтрит {{collection}} "{{slug}}"'
+  uploadMedia: 'CMS: качен файл "{{path}}"'
+  deleteMedia: 'CMS: изтрит файл "{{path}}"'
+
+collections:
+  # ─── ПРОДУКТИ ────────────────────────────────────────────────
+  - name: "shop"
+    label: "Магазин"
+    files:
+      - name: "products"
+        label: "Продукти"
+        file: "data/products.json"
+        format: "json"
+        fields:
+          - label: "Продукти"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.brand}} — {{fields.name}} ({{fields.price}} лв.)"
+            fields:
+              - { label: "ID (уникален код)", name: "id", widget: "string", hint: "напр. p11, p12..." }
+              - { label: "Марка", name: "brand", widget: "string" }
+              - { label: "Име на продукта", name: "name", widget: "string" }
+              - { label: "Цена (лв.)", name: "price", widget: "number", value_type: "float", step: 0.01, min: 0 }
+              - { label: "Стара цена (лв.)", name: "oldPrice", widget: "number", value_type: "float", step: 0.01, required: false, hint: "Оставете празно, ако няма отстъпка" }
+              - label: "Категория"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Промоции", value: "offers" }
+                  - { label: "Парфюми", value: "perfumes" }
+                  - { label: "Грим", value: "makeup" }
+                  - { label: "Коса", value: "hair-care" }
+                  - { label: "Лице", value: "face" }
+                  - { label: "Тяло", value: "body" }
+                  - { label: "Зъби", value: "teeth" }
+                  - { label: "Майка и дете", value: "mother-baby" }
+                  - { label: "Мъже", value: "men" }
+                  - { label: "Специална козметика", value: "pharmacy" }
+                  - { label: "Слънце", value: "sun" }
+                  - { label: "Електро", value: "electronics" }
+                  - { label: "Салони", value: "salon" }
+                  - { label: "Luxury", value: "luxury" }
+                  - { label: "Подаръци", value: "gifts" }
+                  - { label: "Грижа за кожата", value: "skincare" }
+              - { label: "Снимка", name: "image", widget: "image", required: false, hint: "Качете снимка — ще се появи автоматично на сайта" }
+              - { label: "Рейтинг (0–5)", name: "rating", widget: "number", value_type: "float", step: 0.1, min: 0, max: 5, default: 4.5 }
+              - { label: "Брой ревюта", name: "reviews", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Бадж (по избор)", name: "badge", widget: "string", required: false, hint: 'напр. "Ново", "Бестселър"' }
+              - { label: "Показвай в Бестселъри", name: "bestseller", widget: "boolean", default: false }
